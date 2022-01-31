@@ -8,7 +8,9 @@
     "test:watch": "jest --watch",
     "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
     "copy:html": "cp ./src/index.html .dist/index.html",
-    "copy:scripts": "cp -r /src/scrpts dist/scripts"
+    "copy:scripts": "cp -r /src/scrpts dist/scripts",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && npm run build:styles $$ npm run copy:html && npm run copy:scripts"
   },
   "author": "",
   "license": "ISC",
