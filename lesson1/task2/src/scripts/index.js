@@ -1,5 +1,5 @@
 import { initToDoHandlers } from "./initHandlers.js";
-import { renderTasks } from "./addTask.js";
+import { createCheckbox, renderTasks } from "./addTask.js";
 import { getTasksList } from "./tasksGateway.js";
 import { setItem } from "./common.js";
 
@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderTasks();
   });
   initToDoHandlers();
+  console.log(createCheckbox({ done: false, id: "1" }));
 });
 
 const onStorangeChange = (e) => {
