@@ -1,7 +1,7 @@
-"use strict";
-
-var printProfile = function printProfile(profileData) {
-  var name = profileData.name,
-      company = profileData.company;
+const printProfile = function (profileData) {
+  const {
+    name,
+    company
+  } = profileData;
   console.log("".concat(name, " from ").concat(company));
 };
