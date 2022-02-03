@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.16.7",
-    "@babel/plugin-transform-arrow-functions": "^7.16.7",
-    "@babel/plugin-transform-template-literals": "^7.16.7"
+    "@babel/preset-env": "^7.16.11"
   }
 }
