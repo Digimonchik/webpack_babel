@@ -8,19 +8,22 @@
     "test:watch": "jest --watch",
     "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
     "copy:html": "cp ./index.html .dist/index.html",
-    "copy:scripts": "cp -r /src/scripts dist/scripts",
+    "build:scripts": "babel ./src --out-dir ./dist",
     "clean": "rm -rf ./dist",
-    "build": "npm run clean && npm run build:styles $$ npm run copy:html && npm run copy:scripts"
-
+    "build": "npm-run-all clean build:* copy:*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
     "jest": "^27.4.7",
+    "npm-run-all": "^4.1.5",
     "sass": "^1.49.0"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.16.11"
+    "core-js": "^3.21.0"
   }
 }
