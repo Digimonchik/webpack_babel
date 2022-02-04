@@ -2,11 +2,11 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    prfile: "./src/profile/index.js",
-    dashboard: "./src/profile/index.js",
+    profile: "./src/profile/index.js",
+    dashboard: "./src/dashboard/index.js",
   },
   output: {
     filename: "[name].js",
-    path: path.join(__dirname, "./buid"),
+    path: path.join(__dirname, "./build"),
   },
 };
