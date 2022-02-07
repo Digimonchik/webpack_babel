@@ -20,14 +20,14 @@ module.exports = (env, argv) => {
         loader: 'html-loader'
       },
       {
-        test: /.s?css$/,
+        test: /.s?css$/i,
         use: [
           isProduction 
           ? MiniCssExtractPlugin.loader
           : "style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /.(jpg|png)$/,
+        test: / .(jpg|png)$/,
         use: [
             {
                 loader: 'url-loader',
