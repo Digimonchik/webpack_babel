@@ -22,11 +22,9 @@ module.exports = (env, argv) => {
       {
         test: /.s?css$/,
         use: [
-          !isProduction 
-          ? "style-loader"
-          : MiniCssExtractPlugin.loader,
-          "css-loader", 
-          "sass-loader"],
+          isProduction 
+          ? MiniCssExtractPlugin.loader
+          : "style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /.(jpg|png)$/,
