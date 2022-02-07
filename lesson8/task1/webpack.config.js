@@ -4,7 +4,6 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode = 'production';
-
   const config = {
   entry: "./src/index.js",
   output: {
@@ -23,7 +22,7 @@ module.exports = (env, argv) => {
       {
         test: /.s?css$/,
         use: [isProduction 
-          ? HtmlWebpackPlugin.loader
+          ? MiniCssExtractPlugin.loader
           : "style-loader", 
           "css-loader", 
           'sass-loader'],
