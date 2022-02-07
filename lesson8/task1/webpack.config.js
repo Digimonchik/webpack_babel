@@ -21,11 +21,12 @@ module.exports = (env, argv) => {
       },
       {
         test: /.s?css$/,
-        use: [isProduction 
-          ? MiniCssExtractPlugin.loader
-          : "style-loader", 
+        use: [
+          !isProduction 
+          ? "style-loader"
+          : MiniCssExtractPlugin.loader,
           "css-loader", 
-          'sass-loader'],
+          "sass-loader"],
       },
       {
         test: /.(jpg|png)$/,
